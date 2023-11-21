@@ -4,6 +4,7 @@ Body */
     background-color: #EDF7FC;
     color:#007D7C;
 }
+
 /*********
 Navigation bar */
 
@@ -21,7 +22,7 @@ Navigation bar */
     display: block;
     color: #EDF7FC;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 36px;
     text-decoration: none;
   }
   
@@ -35,18 +36,37 @@ Navigation bar */
   }
 
 
+/**********
+Section One */
+
+#flexchunk{
+  display: flex;
+  flex-direction: row;
+  
+}
+
 /* Image div */
 .image{
-    margin-top: 179px;
-    margin-bottom: 65px;
-    margin-left: 117px;
-    margin-right: 763px;
+  /* margin-top: 179px;
+  margin-bottom: 65px;
+  margin-left: 117px;
+  margin-right: 763px; */
+  margin: 179px 65px 763px;
+  
 }
 
 /* Text div */
-.text{
-    margin-top: 408px;
-    margin-bottom: 359px ;
-    margin-left: 794px;
-    margin-right: 132px;
-}
+
+
+
+
+/*********
+Section Two */
+
+
+/*******
+Section Three */
+
+
+/* Footer */
+
