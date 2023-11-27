@@ -1,0 +1,72 @@
+/**********
+Body */
+.body{
+    background-color: #EDF7FC;
+    color:#007D7C;
+}
+
+/*********
+Navigation bar */
+
+.navbar{
+    width: 1440px;
+    height: 42px;
+    flex-shrink: 0;
+    background: #007D7C;
+    overflow: hidden;
+}
+
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: #EDF7FC;
+    text-align: center;
+    padding: 14px 36px;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    background: #EDF7FC;
+    color:#007D7C ;
+  }
+
+  .button-clicked {
+    background-color:  #EDF7FC; 
+  }
+
+
+/**********
+Section One */
+
+#flexchunk{
+  display: flex;
+  flex-direction: row;
+  
+}
+
+/* Image div */
+.image{
+  /* margin-top: 179px;
+  margin-bottom: 65px;
+  margin-left: 117px;
+  margin-right: 763px; */
+  margin: 179px 65px 763px;
+  
+}
+
+/* Text div */
+
+
+
+
+/*********
+Section Two */
+
+
+/*******
+Section Three */
+
+
+/* Footer */
+
