@@ -5,24 +5,43 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,400;1,700&family=Italiana&display=swap" rel="stylesheet">
         
-        <link rel="stylesheet" href="hamburgers.css">
+        
         <link rel="stylesheet" href="style.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="toggle.js"></script>
+        
+        
     </head>
 
-    <body>
+    <body id="main">
         
         <!-- Hamburger button -->
-        <button class="hamburger hamburger--slider" type="button">
-            <span class="hamburger-box">
-              <span class="hamburger-inner"> <!-- Button -->
-                <a href="greece.html">
-                <button class="button"></button>
-                </a></span>
-            </span>
-          </button> 
           
+        <div class="hamburger">&#9776;</div>
+            <div class="menu" style="display: none;">
+                <div class="menu-item">
+                    <a href="index.html"> HOME </a>
+                </div>
+                <div class="menu-item">
+                    <a href="greece.html"> GREECE </a>
+                </div>
+                <div class="menu-item">
+                    <a href="serbia.html"> SERBIA </a>
+                </div>
+                <div class="menu-item">
+                    <a href="austria.html"> AUSTRIA </a>
+                </div>
+            </div>
+
+          <!-- Java Script -->
+        <script>
+            document.querySelector('.hamburger').addEventListener('click', function() {
+                var menu = document.querySelector('.menu');
+                if (menu.style.display === 'none') {
+                    menu.style.display = 'flex';
+                } else {
+                    menu.style.display = 'none';
+                }
+            });
+        </script>
        
           
 

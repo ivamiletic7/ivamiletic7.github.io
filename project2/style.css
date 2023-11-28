@@ -1,35 +1,53 @@
 /* This is the main CSS style sheet for ivamiletic.github.io/project-2 site */
 
-
-
-
-/************
-Button */
-
-.button{
-    width: 69.007px;
-    height: 4px;
-    background: #EDF7FC;
-    margin-top: 41px;
-    margin-left: 28px;
-}
-
-.button:hover {
-    background: #FAF477;
-    cursor: pointer;
-    
-  }
-
-
-/************
-Background Picture */
-
+/**********
+ Body */
 body {
-    width: 1440px;
-    height: 1024px;
+    background-image: url('Photos/mainpage3.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     flex-shrink: 0;
-    background: url("Photos/mainpage2.jpeg"), lightgray 50% / cover no-repeat;;
-    
-    
-}
+    font-family: 'Italiana', serif;
+} 
 
+/************
+ Hamburger menu */
+
+.menu {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    background: #EDF7FC;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.menu-item {
+    margin: 46px;
+}
+a {
+    color: #5596AF;
+    text-align: center;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+}
+.hamburger {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    z-index: 3;
+    cursor: pointer;
+    color:white;
+    font-size: 30px;
+}
+.hamburger.clicked {
+    z-index: 4;
+}

@@ -1,0 +1,184 @@
+/**********
+Body */
+body {
+  font-family: 'Inria Serif', serif ;
+  width: 1440px;
+  margin: 0 auto;
+}
+#greece{
+    background-color: #EDF7FC;
+    color:#007D7C;
+}
+#serbia {
+    background:#F9FFEC;
+    color:rgba(70, 97, 70, 0.87);
+}
+#austria {
+  background-color:#F8F7F7 ;
+  color: #51382A; 
+} 
+.navbar {
+  font-family: 'Italiana', serif;
+}
+
+/* Navigation Bar */
+.navbar{
+  flex-shrink: 0;
+  overflow: hidden;
+  font-size: 30px;
+  width: 1440px;
+  height: 42px;
+}
+.navbar a {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 4px 36px;
+  text-decoration: none;
+  }
+
+/*********
+Navigation bar Greece */
+#greece .navbar {
+  background: #007D7C;
+}
+#greece .navbar a {
+  color: #EDF7FC;
+}  
+#greece .navbar a:hover {
+    background: #EDF7FC;
+    color:#007D7C;
+}
+
+/*********
+Navigation bar Serbia */
+#serbia .navbar {
+background: rgba(70, 97, 70, 0.87);
+}
+#serbia .navbar a {
+color: #F9FFEC;
+}  
+#serbia .navbar a:hover {
+  background: #F9FFEC;
+  color:rgba(70, 97, 70, 0.87);
+}
+
+/*********
+Navigation bar Austria */
+#austria .navbar {
+  background: #51382A;
+}  
+#austria .navbar a {
+  color: #F8F7F7; 
+}  
+#austria .navbar a:hover {
+    background: #F8F7F7;
+    color:#51382A;
+}
+
+/**********
+Sections */
+.flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+}
+.column {
+  display: flex;
+  flex-direction: column;
+
+}
+.h2 {
+  font-size: 40px;
+  letter-spacing: 2.4px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal; 
+  margin-left: 794px;
+  margin-top: 179px;
+}
+.highlight {
+  font-style: italic;
+  font-weight: bold;
+}
+
+/**********
+ Images  */
+#One {
+  width: 544px;
+  height: 738px;
+  margin-left: 117px;
+  margin-right: 133px ;  
+}
+#Two {
+  width: 544px;
+  height: 738px;
+  margin-right: 117px ;
+}
+#Three {
+  width: 536px;
+  height: 748px;
+  margin-left: 117px;
+  margin-right: 133px;
+}
+
+
+/********
+Section One */
+#first-section {
+  margin-top: 179px;
+  margin-bottom: 65px;
+}
+#first-section .text {
+  text-align: justify;
+  margin-right: 123px;
+}
+
+/*********
+Section Two */
+#second-section {
+  margin-bottom: 65px;
+  margin-top: 143px;
+}
+#second-section .text {
+  margin-left: 147px;
+  text-align: justify;
+}
+#second-section .image {
+  margin-left: 133px;
+}
+
+/*******
+Section Three */
+#third-section {
+  margin-bottom: 65px;
+  margin-top: 143px;
+}
+#third-section .text {
+  text-align: justify;
+  margin-right: 123px;
+}
+
+
+/* Footer */
+footer {
+  width: 1440px;
+  height: 110px;
+  margin-top: 143px;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+#greece-footer {
+  background-color: #007D7C;
+  color: #EDF7FC; 
+}
+#serbia-footer {
+  background-color:  rgba(70, 97, 70, 0.87) ;
+  color: #F9FFEC;
+}
+#austria-footer {
+  background-color: #51382A;
+  color: #F8F7F7;
+}
