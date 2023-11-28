@@ -1,3 +1,5 @@
+/* This is the main CSS style sheet for greece.html, serbia.html, and austria.html pages */
+
 /**********
 Body */
 body {
@@ -21,8 +23,8 @@ body {
   font-family: 'Italiana', serif;
 }
 
-/* Navigation Bar */
-.navbar{
+/* Navigation Bar general */
+.navbar {
   flex-shrink: 0;
   overflow: hidden;
   font-size: 25px;
@@ -45,7 +47,8 @@ Navigation bar Greece */
 #greece .navbar a {
   color: #EDF7FC;
 }  
-#greece .navbar a:hover {
+#greece .navbar a:hover,
+#greece .navbar a.open {
     background: #EDF7FC;
     color:#007D7C;
 }
@@ -58,7 +61,8 @@ background: rgba(70, 97, 70, 0.87);
 #serbia .navbar a {
 color: #F9FFEC;
 }  
-#serbia .navbar a:hover {
+#serbia .navbar a:hover,
+#serbia .navbar a.open {
   background: #F9FFEC;
   color:rgba(70, 97, 70, 0.87);
 }
@@ -71,13 +75,14 @@ Navigation bar Austria */
 #austria .navbar a {
   color: #F8F7F7; 
 }  
-#austria .navbar a:hover {
+#austria .navbar a:hover,
+#austria .navbar a.open {
     background: #F8F7F7;
     color:#51382A;
 }
 
 /**********
-Sections */
+Sections general */
 .flex {
   display: flex;
   flex-direction: row;
@@ -120,8 +125,7 @@ Sections */
   width: 536px;
   height: 748px;
   margin-left: 121px;
-  margin-right: 133px;  
-  
+  margin-right: 133px;    
 }
 
 
@@ -162,7 +166,8 @@ Section Three */
 }
 
 
-/* Footer */
+/*******
+ Footer */
 footer {
   width: 1440px;
   height: 110px;
@@ -172,17 +177,27 @@ footer {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  padding: 22px;
-  margin-left: 117px;
+  padding: 31px;
+  margin-left: 90px;
+  font-size: 13px;
 }
+/* Greece footer */
 #greece-footer {
   background-color: #007D7C;
   color: #EDF7FC; 
 }
+#greece-src {
+  color: lightblue;
+}
+/* Serbia footer */
 #serbia-footer {
   background-color:  rgba(70, 97, 70, 0.87) ;
   color: #F9FFEC;
 }
+#serbia-src {
+  color: lightgreen;
+}
+/* Austria footer */
 #austria-footer {
   background-color: #51382A;
   color: #F8F7F7;
@@ -190,3 +205,32 @@ footer {
 #austria-src {
   color:rgba(248, 247, 247, 0.54);
 }
+
+/*******
+ Scroll bar */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+/* Greece scroll bar */
+#greece::-webkit-scrollbar-thumb {
+  background: #007D7C;
+}
+#greece::-webkit-scrollbar-track {
+  background: #EDF7FC;
+}
+/* Serbia scroll bar */
+#serbia::-webkit-scrollbar-thumb {
+  background: rgba(70, 97, 70, 0.87);
+}
+#serbia::-webkit-scrollbar-track {
+  background: #F9FFEC;
+}
+/* Austria scroll bar */
+#austria::-webkit-scrollbar-thumb {
+  background: #51382A;
+}
+#austria::-webkit-scrollbar-track {
+  background: #F8F7F7;
+}
+
