@@ -139,7 +139,15 @@ Section One */
   text-align: justify;
   margin-right: 132px;
 }
-
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 500;
+}
+.overlay-section {
+  position: relative;
+}
+/* added this */
 /*********
 Section Two */
 #second-section {
