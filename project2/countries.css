@@ -101,6 +101,9 @@ Sections general */
   line-height: normal; 
   margin-left: 794px;
   margin-top: 179px;
+  padding: 27px;
+  background-color: #EDF7FC;
+  
 }
 .highlight {
   font-style: italic;
