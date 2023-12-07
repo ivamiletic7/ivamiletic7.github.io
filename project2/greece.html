@@ -1,6 +1,7 @@
 <html>
     <head> 
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Italiana and Inria Serif Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,36 +27,57 @@
             <div class="flex"> 
                     
                 <div class="image">
-                    <img id="One" src="Photos/greece1.png">
+                    <div class="slideshow-container">
+                        <!-- slide one -->
+                        <div class="mySlides1">
+                            <img id="One" src="Photos/greece/greece1.png">
+                        </div>
+                        <!-- slide two -->
+                        <div class="mySlides1">
+                            <video autoplay muted loop id="videoslide">
+                                <source src="Photos/greece/greece2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <!-- slide three -->
+                        <div class="mySlides1">
+                            <img id="One" src="Photos/greece/greece3.jpeg">
+                        </div>
+
+
+                        <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+                    </div>
                 </div>
 
                 <div class="column">
-                    <!-- added overlay -->
-                    <h2 class="overlay"><b>Keri Caves, Zakynthos</b></h2>  
+                    <!-- overlay -->
+                    <h2 id="cavesGreece" class="overlay"><b>Keri Caves, Zakynthos</b></h2>  
                     <p class="text"> <span class="highlight">Keri Caves</span> or “Grotto Keri” is located on the south-western side of a Greek island Zakynthos. In order to visit the caves you have to go by boat, but there are plenty of organized trips from nearby towns.</p>
                 </div>
             </div>
         </section>
+
         <!-- Section Two -->
         <section id="second-section">
             <div class="flex"> 
                
                 <p class="text"> Some of the caves are big enough to allow a boat to enter. Organized trips to Keri include turtle spotting, a barbecue lunch and swimming in waters that go down to a depth of 20 meters. </p>
-                   
+
                 <div class="image">
-                    <img id="Two" src="Photos/greece2.jpeg">
+                    <img id="Three" src="Photos/greece/greece4.jpeg">
                 </div>
+                
             </div>
          </section>
          <!-- Section Three -->
         <section id="third-section">
             <div class="flex">
-                
                 <div class="image">
-                    <img id="Three" src="Photos/greece3.jpeg">
+                    <img id="Three" src="Photos/greece/greece5.JPEG">
                 </div>
-               
+                
                 <p class="text"> The sea is so clear that you can see shoals of colorful fish and down to the floor of the ocean. This is an ideal place for snorkeling or scuba diving. The headland of Keri is one of the highest parts of Zakynthos and the cliffs are another reason to visit this part of the island. </p>
+                
             </div>     
         </section>
     <!-- Footer -->
@@ -65,6 +87,44 @@
         <i>“Keri Caves: Visit These Spectacular Caves by Boat in 2023.” Visit Our Greece, 9 Dec. 2022, <a id="greece-src" href="https://visitourgreece.com/things_to_do/keri-caves/#:~:text=Near%20to%20the%20village%20of,a%20boat%20without%20a%20licence.">https://visitourgreece.com/things_to_do/keri-caves/#:~:text=Near%20to%20the%20village%20of,a%20boat%20without%20a%20licence.</a></i>
         </p>
     </footer>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">&uarr;</button>
+
+
+    
+    <script>
+        // JS slide show
+        let slideIndex = [1,1];
+        let slideId = ["mySlides1", "mySlides2"]
+            showSlides(1, 0);
+            showSlides(1, 1);
+
+        function plusSlides(n, no) {
+            showSlides(slideIndex[no] += n, no);
+        }
+
+        function showSlides(n, no) {
+            let i;
+            let x = document.getElementsByClassName(slideId[no]);
+                if (n > x.length) {slideIndex[no] = 1}    
+                    if (n < 1) {slideIndex[no] = x.length}
+                        for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";  
+                    }
+
+                x[slideIndex[no]-1].style.display = "block";  
+        }  
+        
+        
+        // JS for go to top button
+        let mybutton = document.getElementById("myBtn");
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
 
 
     </body>

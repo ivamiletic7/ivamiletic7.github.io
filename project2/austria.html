@@ -1,6 +1,7 @@
 <html>
     <head> 
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Italiana and Inria Serif Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,15 +23,34 @@
         </header>
         
         <!-- Section One-->
-        <section id="first-section">
+        <section id="first-section" class="overlay-section">
             <div class="flex"> 
                 
                 <div class="image">
-                    <img id="One" src="Photos/austria1.png">
+                    <div class="slideshow-container">
+                        <!-- slide one -->
+                        <div class="mySlides1">
+                            <img id="One" src="Photos/austria/austria1.png">
+                        </div>
+                        <!-- slide two -->
+                        <div class="mySlides1">
+                            <video autoplay muted loop id="videoslide">
+                                <source src="Photos/austria/austria2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <!-- slide three -->
+                        <div class="mySlides1">
+                            <img id="One" src="Photos/austria/austria3.jpeg">
+                        </div>
+    
+    
+                        <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+                    </div>
                 </div>
 
                 <div class="column">
-                    <h2><b>St. Stephen’s Cathedral, Vienna</b></h2>
+                    <h2 id="cathedralAustria" class="overlay"><b>St. Stephen’s Cathedral, Vienna</b></h2>
                     <p class="text"> <span class="highlight">St. Stephen's Cathedral </span> is the symbol of Vienna and also the very center of the city. At 136 meters in height, it is the tallest church in Austria. </p>
                 </div>
             </div>
@@ -42,7 +62,7 @@
                 <p class="text">St. Stephen's Cathedral in the heart of the inner city is 107 meters long. The tallest of its four towers is the south tower at 136 meters. The tower room, from which there is a gigantic view across Vienna, is reached via 343 steps. A total of 13 bells hang here. However, the best known of them, the Pummerin, hangs in the 68 meter-tall north tower. </p>
                
                 <div class="image">
-                    <img id="Two" src="Photos/austria2.png">
+                    <img id="Two" src="Photos/austria/austria4.png">
                 </div>
             </div>
         </section>
@@ -51,7 +71,7 @@
             <div class="flex">
             
                 <div class="image">
-                    <img id="Three" src="Photos/austria3.png">
+                    <img id="Three" src="Photos/austria/austria5.png">
                 </div>
            
                 <p class="text">It is the second-biggest free-swinging chimed church bell in Europe. On the roof of St. Stephen's Cathedral, colorful roof tiles were laid to create the Royal and Imperial double-headed eagle and the coat of arms of the city of Vienna.</p>
@@ -63,6 +83,45 @@
     <i>Muza. “St. Stephen’s Cathedral Vienna - Stephansdom.”, <a id="austria-src" href="https://www.viennaitineraries.com/St_Stephens_Cathedral.html#:~:text=There%20is%20a%20famous%20bell,chimed%20church%20bell%20in%20Europe.&text=There%20are%20colorful%20tiles%20covering,of%20the%20city%20of%20Vienna.">https://www.viennaitineraries.com/St_Stephens_Cathedral.html#:~:text=There%20is%20a%20famous%20bell,<br>chimed%20church%20bell%20in%20Europe.&text=There%20are%20colorful%20tiles%20covering,of%20the%20city%20of%20Vienna.</a></i>
     </p>
 </footer>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">&uarr;</button>
+
+
+    
+    <script>
+        // JS slide show
+        let slideIndex = [1,1];
+        let slideId = ["mySlides1", "mySlides2"]
+            showSlides(1, 0);
+            showSlides(1, 1);
+
+        function plusSlides(n, no) {
+            showSlides(slideIndex[no] += n, no);
+        }
+
+        function showSlides(n, no) {
+            let i;
+            let x = document.getElementsByClassName(slideId[no]);
+                if (n > x.length) {slideIndex[no] = 1}    
+                    if (n < 1) {slideIndex[no] = x.length}
+                        for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";  
+                    }
+                    
+                x[slideIndex[no]-1].style.display = "block";  
+
+                }
+
+        // JS for go to top button
+        let mybutton = document.getElementById("myBtn");
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+    </script>
 
 
 </body>

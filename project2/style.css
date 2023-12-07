@@ -3,11 +3,6 @@
 /**********
  Body */
 body {
-    background-image: url('Photos/mainpage3.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    flex-shrink: 0;
     font-family: 'Italiana', serif;
 } 
 
@@ -39,6 +34,10 @@ a {
     line-height: normal;
     text-decoration: none;
 }
+a:hover {
+    color:#3C4C75;
+    font-size: 80px;
+}
 .hamburger {
     position: fixed;
     left: 20px;
@@ -50,7 +49,21 @@ a {
 }
 .hamburger.clicked {
     z-index: 4;
+} 
+
+
+/**********
+ Video */
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
 }
+
+
+
 
 
 

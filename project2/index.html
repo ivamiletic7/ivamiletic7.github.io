@@ -15,6 +15,7 @@
     <body id="main">
         
         <!-- Hamburger button -->
+        
           <div class="hamburger">&#9776;</div>
             <div class="menu" style="display: none;">
                 <div class="menu-item">
@@ -31,8 +32,13 @@
                 </div>
             </div>
 
+            <video autoplay muted loop id="myVideo">
+                <source src="Photos/videoMain.mp4" type="video/mp4">
+            </video>
+
         <!-- Java Script -->
         <script>
+            // JS for Hamburger Menu
             document.querySelector('.hamburger').addEventListener('click', function() {
                 var menu = document.querySelector('.menu');
                 if (menu.style.display === 'none') {
@@ -41,6 +47,21 @@
                     menu.style.display = 'none';
                 }
             });
+
+            // JS for video background
+            var video = document.getElementById("myVideo");
+            var btn = document.getElementById("myBtn");
+
+            function myFunction() {
+                if (video.paused) {
+                    video.play();
+                    btn.innerHTML = "Pause";
+                } else {
+                    video.pause();
+                    btn.innerHTML = "Play";
+                }
+            }
+
         </script> 
 
     </body>
